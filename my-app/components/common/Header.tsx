@@ -3,9 +3,11 @@ import Link from 'next/link';
 import styles from '../../src/styles/header.module.scss';
 import Image from 'next/image';
 
-interface Props {}
+interface Props {
+  rightElements?: React.ReactElement[];
+}
 
-const HeaderComponent = ({}: Props) => {
+const HeaderComponent = ({ rightElements }: Props) => {
   return (
     <header className={styles.header}>
       <div className={styles.flexItem}>
@@ -18,6 +20,7 @@ const HeaderComponent = ({}: Props) => {
           />
         </Link>
       </div>
+      {rightElements && <div className={styles.flexItem}>{rightElements}</div>}
     </header>
   );
 };
