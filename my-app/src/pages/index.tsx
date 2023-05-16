@@ -25,7 +25,9 @@ export default function Feedback() {
           </Link>,
         ]}
       />
-      <main></main>
+      <main style={{ width: '100%', height: '100%' }}>
+        <MapSection />
+      </main>
     </Fragment>
   );
 }
